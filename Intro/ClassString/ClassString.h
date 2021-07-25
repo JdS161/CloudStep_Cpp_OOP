@@ -12,16 +12,33 @@ class String
 
 
 public:
-	//explicit String(unsigned int);
-	String();
-	explicit String(unsigned int);
+	
+	explicit String(unsigned int _size = 80);
 	String(const char* _str);
+	String(const String&);
+
 	~String();
+
+
+	unsigned int GetSize() const;
+	const char* GetStr() const;
+	char* GetStr();
 	
 
-
+	//OPERATORS
+	String& operator=(const String& other);
+	String& operator+=(const String& other);
+	const char& operator[](unsigned int i) const; //i - index
+	char& operator[](unsigned int i); //i - index
+	friend ostream& operator<<(ostream& os, const String& obj);
+	friend String operator+ (const String& left, const String& right);
+	
+	
 	//Methods
 	void Print() const;
 
 
 };
+
+
+

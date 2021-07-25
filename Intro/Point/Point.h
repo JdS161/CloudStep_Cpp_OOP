@@ -9,22 +9,10 @@ class Point
 	double y;
 
 public:
-	double GetX() const
-	{
-		return x;
-	}
-	double GetY() const
-	{
-		return y;
-	}
-	void SetX(double x)
-	{
-		x = x;
-	}
-	void SetY(double y)
-	{
-		y = y;
-	}
-
+	double GetX() const;
+	double GetY() const;
+	void SetX(double);
+	void SetY(double);
+	
 
 };

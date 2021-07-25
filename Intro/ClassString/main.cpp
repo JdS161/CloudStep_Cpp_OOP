@@ -1,7 +1,12 @@
 #include "ClassString.h"
 
+//#define CONSTRUCTORS_CHECK
+
+
 void main()
 {
+
+#ifdef CONSTRUCTORS_CHECK
 	String str;
 	str.Print();
 
@@ -11,10 +16,31 @@ void main()
 	str2.Print();
 
 	String str3 = "Hello";
+	//str3 = str3;
 	str3.Print();
 
-	String str4 = str3;
+	String str4 = str3;	//copy constructor
 	str4.Print();
+
+	String str5;
+	str5 = str3;		//CopyAssignment
+	str5.Print();
+#endif // CONSTRUCTORS_CHECK
+
+	String str1 = "Hello";
+	cout << str1 << endl;
+	String str2 = "World!";
+	cout << str2 << endl;
+	cout << "\n----------------------------------\n";
+	String str3 = str1 + " " + str2;
+	cout << "\n----------------------------------\n";
+	cout << str3 << endl;
+	cout << "\n----------------------------------\n";
+	str1 += str2;
+	cout << "\n----------------------------------\n";
+	cout << str1 << endl;
+	
+
 
 
 
