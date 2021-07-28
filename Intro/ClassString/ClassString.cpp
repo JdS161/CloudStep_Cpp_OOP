@@ -1,3 +1,4 @@
+#include "..\String_HW\String_HW.h"
 #include "ClassString.h"
 
 
