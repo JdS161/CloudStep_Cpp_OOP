@@ -4,6 +4,7 @@
 Teacher::Teacher(	const string& _firstName, 
 					const string& _lastName, 
 					unsigned int _age, 
+
 					const string& _specialization,	
 					unsigned int _experience)
 	:Human(_firstName, _lastName, _age)

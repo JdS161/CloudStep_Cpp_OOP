@@ -3,7 +3,7 @@
 #include "Teacher.h"
 #include "Graduate.h"
 
-//#define INHERITANCE
+#define INHERITANCE
 #define POLYMORPHISM
 
 
@@ -30,6 +30,7 @@ void main()
 	Human* group[] =
 	{
 		new Student("John", "Doe", 29, "RPO", "VBU_011", 90),
+		new Student("Joahn", "Doe", 29, "RPO", "VBU_011", 90),
 		new Teacher("Michael", "Won", 48, "OOP", 20),
 		new Graduate("Tom", "White", 24, "RPO", "QWE321", 95, "Inheritance")
 	};

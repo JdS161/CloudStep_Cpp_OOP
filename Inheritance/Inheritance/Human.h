@@ -40,6 +40,7 @@ public:
 
 
 	virtual void PrintHuman() const;
+
 	void PrintCounter();
 
 

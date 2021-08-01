@@ -78,3 +78,4 @@ void Human::PrintHuman() const
 {
 	cout << firstName << setw(10) << lastName << setw(10) << age << setw(10);
 }
+ 
