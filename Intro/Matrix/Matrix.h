@@ -22,16 +22,22 @@ public:
 
 
 	//GET/SET methods
-	int** GetMatrix();
+	const unsigned int	GetRows() const;
+	const unsigned int	GetCols() const;
+	const int**			GetMatrix() const;					//TO BE DONE
+	int**				GetMatrix();						//TO BE DONE
 
+	void				SetRows();
+	void				SetCols();
 	static int GetCounter()
 	{
 		return counter;
 	}
-
+	 
 	//Operators overload
 
-
+	friend ostream& operator<< (ostream& out, const Matrix& second);		//TO BE DONE
+	friend istream& operator>> (istream& in, Matrix& second);
 
 	void MatrixAddition();
 	void MatrixSubtraction();
@@ -39,7 +45,8 @@ public:
 	void MatrixDivision();
 
 	void MatrixPrint() const;
-
+	void PrintCounter();
+	
 
 
 };
