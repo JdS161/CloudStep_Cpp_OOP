@@ -15,4 +15,8 @@ void main()
 
 	Matrix mtrx4;
 	mtrx4.MatrixPrint();
+
+	cout << endl << endl << mtrx4 << endl << endl;
+
+
 }

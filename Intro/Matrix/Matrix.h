@@ -16,7 +16,8 @@ private:
 	static int counter;
 public:
 	Matrix(unsigned int _rows = 5, unsigned int _columns = 5);
-	//Matrix(const Matrix&);
+	Matrix(const Matrix&);
+	Matrix(Matrix&&);
 
 	~Matrix();
 
@@ -24,11 +25,11 @@ public:
 	//GET/SET methods
 	const unsigned int	GetRows() const;
 	const unsigned int	GetCols() const;
-	const int**			GetMatrix() const;					//TO BE DONE
+	int**				GetMatrix() const;					//TO BE DONE
 	int**				GetMatrix();						//TO BE DONE
 
-	void				SetRows();
-	void				SetCols();
+	void				SetRows(unsigned int);
+	void				SetCols(unsigned int);
 	static int GetCounter()
 	{
 		return counter;

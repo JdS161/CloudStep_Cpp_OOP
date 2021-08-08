@@ -31,6 +31,44 @@ Matrix::Matrix(unsigned int _rows, unsigned int _columns)
 	SetConsoleTextAttribute(hConsole, (WORD)((0 << 4) | 15));
 }
 
+Matrix::Matrix(const Matrix& other)
+{
+	this->rows = other.rows;
+	this->cols = other.cols;
+	for (int i = 0; i < rows; i++)
+	{
+		matrix[i] = new int[cols];
+	}
+
+	for (int i = 0; i < rows; i++)
+	{
+		for (int j = 0; j < cols; j++)
+		{
+			this->matrix[i][j] = other.matrix[i][j];
+		}
+	}
+
+	cout << "COPY CONSTRUCTOR: " << this << endl;
+}
+
+Matrix::Matrix(Matrix&& other)
+{
+	this->rows = other.rows;
+	this->cols = other.cols;
+	for (int i = 0; i < rows; i++)
+	{
+		matrix[i] = other.matrix[i];
+	}
+
+	other.rows = 0;
+	other.cols = 0;
+	for (int i = 0; i < rows; i++)
+	{
+		other.matrix[i] = nullptr;
+	}
+	cout << "COPY CONSTRUCTOR: " << this << endl;
+}
+
 Matrix::~Matrix()
 {
 	for (int i = 0; i < this->rows; i++)
@@ -58,42 +96,38 @@ const unsigned int Matrix::GetCols() const
 	return cols;
 }
 
-//const int** Matrix::GetMatrix() const
-//{
-//	/*int** matrix = new int* [rows];
-//	for (int i = 0; i < rows; i++)
-//	{
-//		matrix[i] = new int[cols];
-//	}*/
-//
-//	/*for (int i = 0; i < rows; i++)
-//	{
-//		for (int j = 0; j < cols; j++)
-//		{
-//			return matrix;
-//		}
-//	}*/
-//
-//	return matrix;
-//}
-//
-//int** Matrix::GetMatrix()
-//{
-//	/*this->matrix = new int* [rows];
-//	for (int i = 0; i < rows; i++)
-//	{
-//		matrix[i] = new int[cols];
-//	}*/
-//
-//	for (int i = 0; i < rows; i++)
-//	{
-//		for (int j = 0; j < cols; j++)
-//		{
-//			return matrix;
-//		}
-//	}
-//	//return nullptr;
-//}
+ int** Matrix::GetMatrix() const
+{
+	for (int i = 0; i < rows; i++)
+	{
+		for (int j = 0; j < cols; j++)
+		{
+			return matrix;
+		}
+	}
+}
+
+int** Matrix::GetMatrix()
+{
+	for (int i = 0; i < rows; i++)
+	{
+		for (int j = 0; j < cols; j++)
+		{
+			return matrix;
+		}
+	}
+}
+
+void Matrix::SetRows(unsigned int _rows)
+{
+	this->rows = _rows;
+}
+
+void Matrix::SetCols(unsigned int _cols)
+{
+	this->cols = _cols;
+}
+
 
 void Matrix::MatrixPrint() const
 {
@@ -122,11 +156,11 @@ void Matrix::PrintCounter()
 
 }
 
-//ostream& operator<<(ostream& out, const Matrix& obj)
-//{
-//	return out << obj.GetMatrix();
-//
-//}
+ostream& operator<<(ostream& out, const Matrix& obj)
+{
+	return out << obj.GetMatrix();
+
+}
 
 istream& operator>>(istream& in, Matrix& obj)
 {
