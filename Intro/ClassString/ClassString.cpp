@@ -2,24 +2,24 @@
 #include "ClassString.h"
 
 
-String::String(unsigned int _size)
+String::String(unsigned int _size): size(_size)
 {
-	this->size = _size;
+	//->size = _size;
 	this->str = new char[_size] {};
 	cout << "DefConstructor: \t" << this << endl;
 }
 
-String::String(const char* _str) //Constant cahr pointer - is a string constant
+String::String(const char* _str) :size(strlen(_str) + 1), str(new char[size] {}) //Constant char pointer - is a string constant
 {
-	this->size = strlen(_str) + 1;
-	this->str = new char[size];
+	/*this->size = strlen(_str) + 1;
+	this->str = new char[size];*/
 	for (int i = 0; i < size; i++)
 		this->str[i] = _str[i];
 	cout << "1arg Constructor: \t" << this << endl;
 
 }
 
-String::String(const String& other)
+String::String(const String& other) : size(other.size), str(new char[size] {})
 {
 	this->size = other.size;
 	this->str = new char[size] {};
@@ -81,9 +81,6 @@ char& String::operator[](unsigned int i)
 {
 	return str[i];
 }
-
-
-
 
 void String::Print() const
 {
