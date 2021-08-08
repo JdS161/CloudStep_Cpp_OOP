@@ -12,7 +12,7 @@ Teacher::Teacher(	const string& _firstName,
 	SetSpecialization(_specialization);
 	SetExperience(_experience);
 
-	cout << "TEACHER DEFAULT CONSTRUCTOR: " << this << endl;
+	cout << "TEACHER DEFAULT CONSTRUCTOR:    " << this << endl;
 }
 
 Teacher::~Teacher()

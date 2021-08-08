@@ -15,7 +15,7 @@ Student::Student(	const string& _firstName,
 	SetGroup(_group);
 	SetRaing(_rating);
 
-	cout << "STUDENT DEFAULT CONSTRUCTOR: " << this << endl;
+	cout << "STUDENT DEFAULT CONSTRUCTOR:    " << this << endl;
 }
 
 Student::~Student()

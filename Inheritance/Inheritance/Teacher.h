@@ -4,7 +4,7 @@
 
 using namespace std;
 
-class Teacher : Human
+class Teacher : public Human
 {
 private:
 	string specialization;

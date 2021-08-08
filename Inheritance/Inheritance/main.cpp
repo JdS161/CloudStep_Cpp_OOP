@@ -3,7 +3,8 @@
 #include "Teacher.h"
 #include "Graduate.h"
 
-#define INHERITANCE
+
+//#define INHERITANCE
 #define POLYMORPHISM
 
 
@@ -27,6 +28,7 @@ void main()
 	cout << DELIMITER << endl;
 #endif // INHERITANCE
 
+#ifdef POLYMORPHISM
 	Human* group[] =
 	{
 		new Student("John", "Doe", 29, "RPO", "VBU_011", 90),
@@ -40,5 +42,10 @@ void main()
 		group[i]->PrintHuman();
 		cout << DELIMITER << endl;
 	}
+#endif // POLYMORPHISM
+
+
+
+
 
 }

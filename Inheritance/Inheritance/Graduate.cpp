@@ -14,12 +14,12 @@ Graduate::Graduate(
 												
 {
 	SetDiplomaTheme(_diplomaTheme);
-	cout << "GRADUATE DEFAULT CONSTRUCTOR: " << this << endl;
+	cout << "GRADUATE DEFAULT CONSTRUCTOR:   " << this << endl;
 }
 
 Graduate::~Graduate()
 {
-	cout << "GADUATE DESTRUCTOR: " << this << endl;
+	cout << "GRADUATE DESTRUCTOR: " << this << endl;
 }
 
 const string& Graduate::GetDiplomaTheme() const
