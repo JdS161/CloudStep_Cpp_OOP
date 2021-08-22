@@ -74,8 +74,8 @@ void Human::PrintCounter()
 		cout << "st-object";
 }
 
-void Human::PrintHuman() const
+void Human::Print() const
 {
-	cout << firstName << setw(10) << lastName << setw(10) << age << setw(10);
+	cout << setw(10) << firstName << setw(10) << lastName << setw(10) << age << "   ";
 }
  

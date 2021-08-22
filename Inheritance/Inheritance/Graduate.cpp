@@ -19,7 +19,7 @@ Graduate::Graduate(
 
 Graduate::~Graduate()
 {
-	cout << "GRADUATE DESTRUCTOR: " << this << endl;
+	cout << "GRADUATE DESTRUCTOR:    " << this << endl;
 }
 
 const string& Graduate::GetDiplomaTheme() const
@@ -32,8 +32,8 @@ void Graduate::SetDiplomaTheme(const string& _diplomaTheme)
 	this->diplomaTheme = _diplomaTheme;
 }
 
-void Graduate::PrintGraduate() const
+void Graduate::Print() const
 {
-	Student::PrintStudent();
+	Student::Print();
 	cout << "Diploma theme: " << diplomaTheme << endl;
 }

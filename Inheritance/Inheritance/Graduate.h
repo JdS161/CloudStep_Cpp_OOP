@@ -17,7 +17,7 @@ public:
 	void SetDiplomaTheme(const string&);
 
 
-	void PrintGraduate() const;
+	void Print() const;
 
 
 };

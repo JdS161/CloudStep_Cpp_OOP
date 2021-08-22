@@ -20,7 +20,7 @@ Student::Student(	const string& _firstName,
 
 Student::~Student()
 {
-	cout << "STUDENT DESTRUCTED: " << this << endl;
+	cout << "STUDENT DESTRUCTED:     " << this << endl;
 }
 
 const string& Student::GetSpecialization() const
@@ -55,9 +55,9 @@ void Student::SetRaing(double _rating)
 	this->rating = _rating;
 }
 
-void Student::PrintStudent() const
+void Student::Print() const
 {
-	Human::PrintHuman();
-	cout <<setw(10) <<  "Specialization: " << specialization << ", group: " << group << ", rating: " << rating << endl;
+	Human::Print();
+	cout <<setw(10) <<  "Specialization: " << specialization << ", group: " << group << ", rating: " << rating;
 }
 

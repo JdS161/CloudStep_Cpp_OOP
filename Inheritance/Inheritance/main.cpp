@@ -37,15 +37,23 @@ void main()
 		new Graduate("Tom", "White", 24, "RPO", "QWE321", 95, "Inheritance")
 	};
 
+	cout << endl << DELIMITER << endl;
 	for (int i = 0; i < sizeof(group) / sizeof(Human*); i++)
 	{
-		group[i]->PrintHuman();
+		group[i]->Print();
 		cout << DELIMITER << endl;
 	}
+
+	for (int i = 0; i < sizeof(group) / sizeof(Human*); i++)
+	{
+		delete group[i];
+	}
+
+
 #endif // POLYMORPHISM
 
 
-
-
+	//system("pause");
+	
 
 }

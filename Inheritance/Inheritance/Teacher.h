@@ -22,7 +22,7 @@ public:
 	void SetSpecialization(const string&);
 	void SetExperience(unsigned int);
 
-	void PrintTeacher() const;
+	void Print() const;
 
 
 };

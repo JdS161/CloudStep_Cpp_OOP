@@ -32,6 +32,6 @@ public:
 
 
 
-	void PrintStudent() const;
+	void Print() const;
 
 };

@@ -17,7 +17,7 @@ Teacher::Teacher(	const string& _firstName,
 
 Teacher::~Teacher()
 {
-	cout << "TEACHER DESTRUCTED: " << this << endl;
+	cout << "TEACHER DESTRUCTED:     " << this << endl;
 
 }
 
@@ -42,8 +42,8 @@ void Teacher::SetExperience(unsigned int _experience)
 	this->experience = _experience;
 }
 
-void Teacher::PrintTeacher() const
+void Teacher::Print() const
 {
-	Human::PrintHuman();
+	Human::Print();
 	cout << setw(10) << "Specialization: " << specialization << ", experience: " << experience << endl;
 }

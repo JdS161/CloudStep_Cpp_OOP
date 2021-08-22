@@ -19,7 +19,7 @@ private:
 
 public:
 	Human(const string&, const string&, unsigned int);
-	~Human();
+	virtual ~Human();
 
 
 	// GET/SET methods
@@ -39,7 +39,7 @@ public:
 
 
 
-	virtual void PrintHuman() const;
+	virtual void Print() const;
 
 	void PrintCounter();
 
