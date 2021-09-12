@@ -40,7 +40,10 @@ public:
 	friend ostream& operator<< (ostream& out, const Matrix& second);		//TO BE DONE
 	friend istream& operator>> (istream& in, Matrix& second);
 
-	void MatrixAddition();
+	const char&& operator[](unsigned int i) const;
+	char&& operator[](unsigned int i);
+
+	void MatrixAddition(Matrix&&, Matrix&&);
 	void MatrixSubtraction();
 	void MatrixMultiplication();
 	void MatrixDivision();

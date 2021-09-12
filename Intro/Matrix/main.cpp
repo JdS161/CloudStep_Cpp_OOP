@@ -1,6 +1,6 @@
 #include "Matrix.h"
 
-void main()
+int main()
 {
 	srand(time(NULL));
 
@@ -16,7 +16,7 @@ void main()
 	Matrix mtrx4;
 	mtrx4.MatrixPrint();
 
-	cout << endl << endl << mtrx4 << endl << endl;
+	//cout << endl << endl << mtrx4 << endl << endl;
 
-
+	return 0;
 }

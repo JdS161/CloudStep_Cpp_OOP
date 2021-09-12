@@ -6,6 +6,7 @@ using namespace std;
 class Element
 {
 private:
+	static int count;
 	int data;
 	Element* pNext;
 
@@ -16,3 +17,4 @@ public:
 	friend class ForwardList;
 
 };
+//int Element::count = 0;

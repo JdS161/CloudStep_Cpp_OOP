@@ -129,6 +129,23 @@ void Matrix::SetCols(unsigned int _cols)
 }
 
 
+void Matrix::MatrixAddition(Matrix&& _matr1, Matrix&& _matr2)
+	/** :rows(GetRows(_matr1)),
+	 cols(GetCols(_matr1))*/
+{
+	Matrix sumMatrix{};// (GetRows(_matr1), GetCols(_matr1));
+
+	for (int i = 0; i < rows; i++)
+	{
+		for (int j = 0; j < cols; j++)
+		{
+			matrix[i][j] = _matr1[i][j] + _matr2[i][j];
+			cout << setw(5) << matrix[i][j];
+		}
+		cout << endl;
+	}
+}
+
 void Matrix::MatrixPrint() const
 {
 	for (int i = 0; i < rows; i++)
@@ -170,4 +187,13 @@ istream& operator>>(istream& in, Matrix& obj)
 	in >> obj.cols;
 
 	return in;
+}
+const char& Matrix::operator[](unsigned int i) const
+{
+	return matrix[i];
+}
+
+char& Matrix::operator[](unsigned int i)
+{
+	return str[i];
 }
