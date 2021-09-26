@@ -4,7 +4,7 @@ using std::cout;
 using std::endl;
 
 //#define BASE_CHECK
-
+#define delimiter "\n---------------------------------------------------------------\n"
 void main()
 {
 #ifdef BASE_CHECK
@@ -35,10 +35,25 @@ void main()
 #endif // BASE_CHECK
 
 	ForwardList list = { 3,5,8,13,21 };
-	list.Print();
-	ForwardList list2;
+	//list.Print();
+	cout << endl;
+	cout << delimiter;
+	cout << "RANGE BASED FOR"<<endl;
+	for (int i : list)
+	{
+		cout << i << " ";
+	}
+	cout << endl;
+	cout << delimiter;
+	/*cout << "FOR" << endl;
+	for (ForwardList::Iterator it = list.begin(), end = list.end(); it != end; ++it)
+	{
+		cout << *it << " ";
+	}*/
+	cout << delimiter;
+	/*ForwardList list2;
 	list2 = list;
-	list2.Print();
+	list2.Print();*/
 
 }
 

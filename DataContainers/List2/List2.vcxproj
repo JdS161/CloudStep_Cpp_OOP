@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{51f6b310-a375-4ecc-afa1-54a1cc04a676}</ProjectGuid>
-    <RootNamespace>ForwardList</RootNamespace>
+    <ProjectGuid>{5201c9ce-1e7a-43e1-8c1d-9576f86e267b}</ProjectGuid>
+    <RootNamespace>List2</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,15 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Element.cpp" />
-    <ClCompile Include="ForwardList.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="List.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Element.h" />
-    <ClInclude Include="ForwardList.h" />
-    <ClInclude Include="List.h" />
+    <ClCompile Include="List2.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

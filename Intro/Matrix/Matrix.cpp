@@ -156,8 +156,6 @@ void Matrix::MatrixPrint() const
 		}
 		cout << endl;
 	}
-
-	
 }
 
 void Matrix::PrintCounter()
@@ -170,13 +168,11 @@ void Matrix::PrintCounter()
 		cout << "nd-object";
 	if (this->GetCounter() == 1)
 		cout << "st-object";
-
 }
 
 ostream& operator<<(ostream& out, const Matrix& obj)
 {
 	return out << obj.GetMatrix();
-
 }
 
 istream& operator>>(istream& in, Matrix& obj)
@@ -188,12 +184,12 @@ istream& operator>>(istream& in, Matrix& obj)
 
 	return in;
 }
-const char& Matrix::operator[](unsigned int i) const
+const int& Matrix::operator[](unsigned int i) const
 {
 	return matrix[i];
 }
 
-char& Matrix::operator[](unsigned int i)
+int& Matrix::operator[](unsigned int i)
 {
-	return str[i];
+	return matrix[i];
 }
