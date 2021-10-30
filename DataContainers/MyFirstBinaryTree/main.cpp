@@ -18,7 +18,7 @@ int main()
 	}
 
 	//tree.Show();
-	tree.Print();
+	
 	cout << "Minimal = " << tree.MinValue() << endl;
 	cout << "Maximal = " << tree.MaxValue() << endl;
 	cout << "Count = " << tree.Count() << endl;
@@ -36,6 +36,6 @@ int main()
 	cin >> value;
 	tree.Erase(value);
 	tree.Show();
-	//tree.Print();
+	
 	return 0;
 }

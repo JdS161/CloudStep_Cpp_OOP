@@ -36,7 +36,7 @@ public:
 	int Count() const;
 	int Sum() const;
 	double Average() const;
-	void Print();
+	
 	void Show() const;
 
 
@@ -55,6 +55,6 @@ private:
 
 
 	void Show(Element*)const;
-	void Print(Element*, int);
+	
 	
 };

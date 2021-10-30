@@ -66,13 +66,6 @@ double Tree::Average() const
 {
 	return (double)Sum(Root)/ Count(Root);
 }
-
-void Tree::Print()
-{
-	Print(this->Root, 0);
-	cout << endl;
-}
-
 void Tree::Show() const
 {
 	Show(this->Root);
@@ -158,8 +151,6 @@ void Tree::Clear(Element* Root)
 	Clear(Root->pRight);
 	delete Root;
 }
-
-
 void Tree::Show(Element* Root) const
 {
 	if (Root == nullptr) 
@@ -169,16 +160,4 @@ void Tree::Show(Element* Root) const
 	Show(Root->pRight);
 }
 
-void Tree::Print(Element* Root, int level)
-{
-	if (Root)
-	{
-		Print(Root->pLeft, level + 1);
-		for (int i = 0; i < level; i++)
-		{
-			cout << "	";
-		}
-		cout << Root->data << endl;
-		Print(Root->pRight, level + 1);
-	}
-}
+
