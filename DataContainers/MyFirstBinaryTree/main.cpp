@@ -1,7 +1,8 @@
 #include "Tree.h"
 #include <cmath>
 
-//#define BASE
+#define BASE
+//#define INIT_CHECK
 
 int main()
 {
@@ -17,18 +18,17 @@ int main()
 		tree.Insert(rand() % 100);
 	}
 
-	//tree.Show();
+	tree.Show();
 	
 	cout << "Minimal = " << tree.MinValue() << endl;
 	cout << "Maximal = " << tree.MaxValue() << endl;
 	cout << "Count = " << tree.Count() << endl;
 	cout << "Sum = " << tree.Sum() << endl;
 	cout << "Average = " << tree.Average() << endl;
-	cout << "Root = ";
 	
-
 #endif // BASE	
 
+#ifdef INIT_CHECK
 	Tree tree = { 12,43,5,21,87,12,3,0 };
 	tree.Show();
 	int value;
@@ -36,6 +36,8 @@ int main()
 	cin >> value;
 	tree.Erase(value);
 	tree.Show();
+#endif // INIT_CHECK
+
 	
 	return 0;
 }
