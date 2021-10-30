@@ -1,0 +1,41 @@
+#include "Tree.h"
+#include <cmath>
+
+//#define BASE
+
+int main()
+{
+#ifdef BASE
+	srand(time(NULL));
+
+	int treeSize;
+	cout << "Tree size = ";
+	cin >> treeSize;
+	Tree tree;
+	for (int i = 0; i < treeSize; i++)
+	{
+		tree.Insert(rand() % 100);
+	}
+
+	//tree.Show();
+	tree.Print();
+	cout << "Minimal = " << tree.MinValue() << endl;
+	cout << "Maximal = " << tree.MaxValue() << endl;
+	cout << "Count = " << tree.Count() << endl;
+	cout << "Sum = " << tree.Sum() << endl;
+	cout << "Average = " << tree.Average() << endl;
+	cout << "Root = ";
+	
+
+#endif // BASE	
+
+	Tree tree = { 12,43,5,21,87,12,3,0 };
+	tree.Show();
+	int value;
+	cout << "Write a number to be deleted: ";
+	cin >> value;
+	tree.Erase(value);
+	tree.Show();
+	//tree.Print();
+	return 0;
+}

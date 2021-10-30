@@ -26,7 +26,7 @@ class Tree
 		friend class Tree;
 	}*Root;
 public:
-	Element* getRoot()const
+	Element* GetRoot()const
 	{
 		return Root;
 	}
@@ -39,7 +39,7 @@ public:
 	{
 		for (int const* it = il.begin(); it != il.end(); it++)
 		{
-			insert(*it, this->Root);
+			Insert(*it, this->Root);
 		}
 	}
 	~Tree()
@@ -48,9 +48,9 @@ public:
 		cout << "TDestructor:\t" << this << endl;
 	}
 
-	void insert(int Data)
+	void Insert(int Data)
 	{
-		insert(Data, Root);
+		Insert(Data, Root);
 	}
 	int minValue()
 	{
@@ -62,15 +62,15 @@ public:
 	}
 	int count()
 	{
-		return count(Root);
+		return Count(Root);
 	}
-	int sum() const
+	int Sum() const
 	{
-		return sum(Root);
+		return Sum(Root);
 	}
 	double avg()const
 	{
-		return (double)sum(Root) / count(Root);
+		return (double)Sum(Root) / Count(Root);
 	}
 	void erase(int Data)
 	{
@@ -84,7 +84,7 @@ public:
 	}
 
 private:
-	void insert(int Data, Element* Root)
+	void Insert(int Data, Element* Root)
 	{
 		if (this->Root == nullptr)
 		{
@@ -95,11 +95,11 @@ private:
 		if (Data < Root->Data)
 		{
 			if (Root->pLeft == nullptr)	Root->pLeft = new Element(Data);
-			else insert(Data, Root->pLeft);
+			else Insert(Data, Root->pLeft);
 		}
 		else
 		{
-			if (Root->pRight)insert(Data, Root->pRight);
+			if (Root->pRight)Insert(Data, Root->pRight);
 			else Root->pRight = new Element(Data);
 		}
 	}
@@ -143,16 +143,16 @@ private:
 		return Root->pRight ? maxValue(Root->pRight) : Root->Data;
 	}
 
-	int count(Element* Root) const
+	int Count(Element* Root) const
 	{
 		/*if (Root == NULL)
 			return 0;
 		return count(Root->pRight) + count(Root->pLeft) + 1;*/
-		return Root==nullptr ? 0 : count(Root->pRight) + count(Root->pLeft) + 1;
+		return Root==nullptr ? 0 : Count(Root->pRight) + Count(Root->pLeft) + 1;
 	}
-	int sum(Element* Root)const
+	int Sum(Element* Root)const
 	{
-		return !Root ? 0 : sum(Root->pLeft) + sum(Root->pRight) + Root->Data;
+		return !Root ? 0 : Sum(Root->pLeft) + Sum(Root->pRight) + Root->Data;
 	}
 
 	void clear(Element* Root)
