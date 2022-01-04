@@ -3,11 +3,27 @@
 
 void main()
 {
-	Matrix first(4, 6);
+	srand(time(NULL));
+
+	Matrix first(5, 3);
+	for (int i = 0; i < first.GetRows(); i++)
+	{
+		for (int j = 0; j < first.GetCols(); j++)
+		{
+			first[i][j] = 1 + rand() % 9;
+		}
+	}
 	cout << "FIRST MATRIX:\n" << endl;
 	first.PrintMatrix();
 
-	Matrix second(4, 6);	
+	Matrix second(5, 3);
+	for (int i = 0; i < second.GetRows(); i++)
+	{
+		for (int j = 0; j < second.GetCols(); j++)
+		{
+			second[i][j] = 1 + rand() % 9;
+		}
+	}
 	cout << "SECOND MATRIX:\n" << endl;
 	second.PrintMatrix();
 

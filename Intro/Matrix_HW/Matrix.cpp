@@ -1,4 +1,5 @@
 #include "Matrix.h"
+#include <ctime>
 
 
 Matrix::Matrix()
@@ -17,17 +18,9 @@ Matrix::Matrix(int _rows, int _cols)
 	{
 		matrix[i] = new int[cols]{};
 	}
-
-	for (int i = 0; i < rows; i++)
-	{
-		for (int j = 0; j < cols; j++)
-		{
-			matrix[i][j] = rand() % 100;
-		}
-	}
-
 	cout << "\nCONSTRUCTOR: \t" << this << endl;
 }
+
 
 Matrix::Matrix(const Matrix& other)
 {
@@ -106,10 +99,10 @@ Matrix& Matrix::operator=(Matrix&& other)
 
 Matrix operator+(const Matrix& _left, const Matrix& _right)
 {
-	if (_left.GetCols() !=_right.GetCols() || _left.GetRows() != _right.GetRows())
+	/*if (_left.GetCols() !=_right.GetCols() || _left.GetRows() != _right.GetRows())
 	{ 
 		return Matrix();
-	}
+	}*/
 
 	Matrix temp(_left.GetRows(), _left.GetCols());
 	for (int i = 0; i < _left.GetRows(); i++)
@@ -121,6 +114,7 @@ Matrix operator+(const Matrix& _left, const Matrix& _right)
 	}
 	return temp;
 }
+
 
 Matrix operator-(const Matrix& _left, const Matrix& _right)
 {
@@ -155,7 +149,7 @@ Matrix operator/(const Matrix& _left, const Matrix& _right)
 	{
 		for (int j = 0; j < _left.GetCols(); j++)
 		{
-			temp[i][j] = _left[i][j] *(1 / _right[i][j]);
+			temp[i][j] = (double)_left[i][j]  / (double)_right[i][j];
 		}
 	}
 	return temp;
