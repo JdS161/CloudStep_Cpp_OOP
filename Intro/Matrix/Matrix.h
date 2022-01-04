@@ -30,7 +30,7 @@ public:
 
 	void				SetRows(unsigned int);
 	void				SetCols(unsigned int);
-	static int GetCounter()
+	static int			GetCounter()
 	{
 		return counter;
 	}
@@ -40,8 +40,13 @@ public:
 	friend ostream& operator<< (ostream& out, const Matrix& second);		//TO BE DONE
 	friend istream& operator>> (istream& in, Matrix& second);
 
-	const char&& operator[](unsigned int i) const;
-	char&& operator[](unsigned int i);
+	const int&& operator[](unsigned int i) const;
+	int&& operator[](unsigned int i);
+	///*const int& operator[](unsigned int i) const;
+	//int& operator[](unsigned int i);*/
+
+	/*const int& operator[] (unsigned int, unsigned int) const;
+	int*/
 
 	void MatrixAddition(Matrix&&, Matrix&&);
 	void MatrixSubtraction();
