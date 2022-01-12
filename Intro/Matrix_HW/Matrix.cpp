@@ -99,11 +99,6 @@ Matrix& Matrix::operator=(Matrix&& other)
 
 Matrix operator+(const Matrix& _left, const Matrix& _right)
 {
-	/*if (_left.GetCols() !=_right.GetCols() || _left.GetRows() != _right.GetRows())
-	{ 
-		return Matrix();
-	}*/
-
 	Matrix temp(_left.GetRows(), _left.GetCols());
 	for (int i = 0; i < _left.GetRows(); i++)
 	{
@@ -165,3 +160,4 @@ void Matrix::PrintMatrix() const
 		}cout << endl;
 	}
 }
+

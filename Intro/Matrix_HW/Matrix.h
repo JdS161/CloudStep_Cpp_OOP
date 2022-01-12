@@ -31,6 +31,8 @@ public:
 	friend Matrix operator*(const Matrix&, const Matrix&);
 	friend Matrix operator/(const Matrix&, const Matrix&);
 
+
 	void PrintMatrix() const;
+	
 
 };
