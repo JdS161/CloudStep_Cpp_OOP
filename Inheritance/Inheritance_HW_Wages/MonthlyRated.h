@@ -19,9 +19,7 @@ public:
 	double GetMonthlyWage();
 	string GetEmployeeLName();
 	string GetEmployeeFName();
-	//void SetEmployeeWage(double);
 
 	void PrintMonthlyRated() const;
-
 };
 

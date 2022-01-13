@@ -36,11 +36,11 @@ double EmployeePool::TotalPoolWage(/*EmployeePool& _pool*/)
 {
 	for (Employee n : employees)
 	{
-		if (typeid(n) == typeid(HourlyRated))
+		if (n.GetHourly())
 		{
 			totalWage += (n.GetWage() * 168);
 		}
-		if (typeid(n) == typeid(MonthlyRated))
+		if (n.GetMonthly())
 		{
 			totalWage += n.GetWage();
 		}

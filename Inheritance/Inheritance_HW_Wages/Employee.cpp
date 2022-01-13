@@ -4,9 +4,7 @@ Employee::Employee()
 {
 	this->lName = "EMPTY";
 	this->fName = "Empty";
-	this->wage = 0;
-	//cout << "EMPLOYEE_DEFAULT_CONSTRUCTOR: \t" << this << endl;
-
+	this->wage = 0;	
 }
 
 Employee::Employee(string _lName, string _fName, double _wage)
@@ -14,12 +12,10 @@ Employee::Employee(string _lName, string _fName, double _wage)
 	this->lName = _lName;
 	this->fName = _fName;
 	this->wage = _wage;
-	//cout << "EMPLOYEE_CONSTRUCTOR: \t" << this << endl;
 }
 
 Employee::~Employee()
 {
-	//cout << "EMPLOYEE_DESTRUCTOR: \t" << this << endl;
 }
 
 string Employee::GetLName()
@@ -37,20 +33,30 @@ double Employee::GetWage()
 	return wage;
 }
 
+bool Employee::GetHourly()
+{
+	return hourly;
+}
+
+bool Employee::GetMonthly()
+{
+	return monthly;
+}
+
 void Employee::SetWage(double _wage)
 {
 	this->wage = _wage;
 }
-//
-//void Employee::SetWage(HourlyRated& _externalData)
-//{
-//	this->wage = _externalData.GetHourlyWage();
-//}
-//
-//void Employee::SetWage(MonthlyRated& _externalData)
-//{
-//	this->wage = _externalData.GetMonthlyWage();
-//}
+
+void Employee::SetHourly(bool _hourly)
+{
+	this->hourly = true;
+}
+
+void Employee::SetMonthly(bool)
+{
+	this->monthly = true;
+}
 
 void Employee::PrintEmployee() const
 {

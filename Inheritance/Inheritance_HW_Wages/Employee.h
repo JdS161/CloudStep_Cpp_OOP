@@ -11,6 +11,8 @@ protected:
 	string lName;
 	string fName;
 	double wage;
+	bool hourly = false;
+	bool monthly = false;
 
 public:
 	Employee();
@@ -20,10 +22,11 @@ public:
 	string GetLName();
 	string GetFName();
 	double GetWage();
-
+	bool GetHourly();
+	bool GetMonthly();
 	void SetWage(double);
-	/*void SetWage(HourlyRated&);
-	void SetWage(MonthlyRated&);*/
+	void SetHourly(bool);
+	void SetMonthly(bool);
 
 	void PrintEmployee() const;
 

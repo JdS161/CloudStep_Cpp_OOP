@@ -6,33 +6,25 @@
 
 int main()
 {
-
 	//На организации есть два типа сотрудников - с почасовой и помесячной оплатой.
 	//	Необходимо расчитать зарплату для отдела из пяти сотрудников.
 
-
-	Employee first = Employee("Doe", "John", 0);
-	//first.PrintEmployee();
-
-	HourlyRated second = HourlyRated("Smith", "Richard", 35);
-	//second.PrintHourlyWagedEmployee();
-
-	HourlyRated third = HourlyRated(first, 20);
-	////third = first;
-	//third.PrintHourlyWagedEmployee();
-
-	MonthlyRated forth = MonthlyRated("Musk", "Elon",  5600);
-	//forth.PrintMonthlyRated();
+	Employee first = Employee("Doe", "John", 0);	
+	HourlyRated second = HourlyRated("Smith", "Richard", 35);	
+	HourlyRated third = HourlyRated(first, 20);	
+	MonthlyRated forth = MonthlyRated("Musk", "Elon",  5600);	
+	MonthlyRated fifth = MonthlyRated("Gates", "Bill", 5400);
 
 	EmployeePool pool = EmployeePool();
 	pool.AddEmployee(first);
 	pool.AddEmployee(second);
 	pool.AddEmployee(third);
 	pool.AddEmployee(forth);
+	pool.AddEmployee(fifth);
 
 	pool.PrintEmployeePool();
 
-	cout << "Total wage = " << pool.TotalPoolWage() << endl;
+	cout << "Total wage (per month)= " << pool.TotalPoolWage() << endl;
 
 	return 0;
 }

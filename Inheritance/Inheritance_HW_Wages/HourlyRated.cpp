@@ -4,8 +4,8 @@ HourlyRated::HourlyRated()
 {
 	lName = "EMPTY";
 	fName = "EMPTY";
+	this->hourly = true;	
 	hourlyWage = 0;
-	//cout << "HRW_DEFAULT_CONSTRUCTOR: \t" << this << endl;
 }
 
 HourlyRated::HourlyRated(string _lName, string _fName, double _hourlyWage)
@@ -13,33 +13,27 @@ HourlyRated::HourlyRated(string _lName, string _fName, double _hourlyWage)
 	this->lName = _lName;
 	this->fName = _fName;
 	SetWage(_hourlyWage);
-	//this->hourlyWage = _hourlyWage;
-	//cout << "HRW_CONSTRUCTOR: \t" << this << endl;
+	this->hourly = true;
 }
 
 HourlyRated::HourlyRated(Employee& other, double _hourlyWage)
 {
-	//*this = other;
 	this->lName = other.GetLName();
 	this->fName = other.GetFName();
 	SetWage(_hourlyWage);
-	//this->hourlyWage = _hourlyWage;
-	//cout << "HRW_COPY_CONSTRUCTOR_2: \t" << this << endl;
-
+	SetHourly(true);
 }
 
 HourlyRated::HourlyRated(Employee& other)
 {
-	//*this = other;
 	this->lName = other.GetLName();
 	this->fName = other.GetFName();
 	this->hourlyWage = 0;
-	//cout << "HRW_COPY_CONSTRUCTOR_1: \t" << this << endl;
+	this->hourly = true;
 }
 
 HourlyRated::~HourlyRated()
 {
-	//cout << "HRW_DESTRUCTOR: \t" << this << endl;
 }
 
 double HourlyRated::GetHourlyWage()

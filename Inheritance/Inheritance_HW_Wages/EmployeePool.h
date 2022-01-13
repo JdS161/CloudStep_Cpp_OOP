@@ -7,7 +7,7 @@
 
 using namespace std;
 
-class EmployeePool/* public HourlyRated, public MonthlyRated*/
+class EmployeePool
 {	
 	vector <Employee> employees;
 	double totalWage;
@@ -21,5 +21,5 @@ public:
 
 	void PrintEmployeePool() const;
 
-	double TotalPoolWage(/*EmployeePool&*/);
+	double TotalPoolWage();
 };

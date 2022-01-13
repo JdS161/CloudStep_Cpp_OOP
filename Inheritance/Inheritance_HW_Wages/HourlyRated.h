@@ -20,6 +20,4 @@ public:
 	string GetEmployeeLName();
 	string GetEmployeeFName();
 	void PrintHourlyWagedEmployee() const;
-
-
 };
